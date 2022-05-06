@@ -22,7 +22,7 @@ header {
     background-color: #299DE6;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
+    width: 100vw;
 }
 
 .header__logo {
@@ -66,39 +66,73 @@ h2 {
     color: #299DE6;
     font-family: 'Leckerli One', cursive;
 }
-.portada{
-    display: flex;
-    flex-direction: column;
-    background-image: url("../recursos/img-principal.jpg");
-    background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size:  cover;
-    height: 600px;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr; 
+    grid-template-areas: "portada portada portada portada"
+                        "imagen__destacada imagen__destacada resumen resumen"
+                        "form form newsletter__titulo newsletter__titulo"
+                        "card__uno card__dos card__tres card__cuatro";
     justify-content: center;
     align-items: center;
 }
 
-.destacado {
+.portada{
+    grid-area: portada;
     display: flex;
-    height: 600px;
+    flex-direction: column;
+    background-image: url("../recursos/img-principal.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+    justify-content: center;
+    align-items: center;
 }
 
-.destacados__titulo{
-    align-self: center;
+.imagen__destacada{
+    grid-area: imagen__destacada;
 }
 
-.newsletter {
+.resumen{
+    grid-area:resumen;
+}
+
+.form{
+    grid-area: form;
+    justify-self: center;
+}
+
+.newsletter__titulo__grid{
+    grid-area: newsletter__titulo;
+}
+
+
+.newsletter__form {
     display: flex;
+    flex-direction: column;
+    gap: 0.63rem;
+    align-items: center;
 }
 
-.cursos {
-    display: flex;
-    flex-direction: row; /* flex-direction: row (default) flex-direction: column */
-    flex-wrap: wrap;
-    justify-content: space-around;
+.card__uno {
+    grid-area: card__uno;
 }
 
+.card__dos{
+    grid-area: card__dos;
+}
+
+.card__tres {
+    grid-area: card__tres;
+}
+
+.card__cuatro {
+    grid-area: card__cuatro;
+}
 .cursos__tarjetas--destacado {
     background-color: #B5B20E;
     padding: 10px;
@@ -112,8 +146,6 @@ h2 {
     /* justify-content: center; */ /* /vertical/ */
     align-items: center;
     background-color: #c8eaff;
-    padding: 10px;
-    margin-top: 0px;
     margin:30px;
     width: 200px;
     height: 300px;
@@ -155,4 +187,66 @@ footer{
 .footer__redes {
     width: 50px;
     height: 50px;
+}
+
+@media (min-width: 541px) and (max-width: 720px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr; 
+        grid-template-areas: "portada portada"
+                            "imagen__destacada imagen__destacada"
+                            "resumen resumen"
+                            "newsletter__titulo newsletter__titulo"
+                            "form form" 
+                            "card__uno card__dos" 
+                            "card__tres card__cuatro";
+    }
+    .portada{
+        height: 70vh; /* viewHeight width viewWidth*/
+    }
+}
+
+@media (min-width: 320px) and (max-width: 540px){
+    header {
+        flex-direction: column;
+    }
+    .header__navegacion{
+        flex-direction: column;
+    }
+    .grid {
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto; 
+        grid-template-areas: "portada"
+        "imagen__destacada "
+        "resumen"
+        "newsletter__titulo"
+        "form" 
+        "card__uno" 
+        "card__dos" 
+        "card__tres" 
+        "card__cuatro";
+    }
+    .portada{
+        height: 50vh; /* viewHeight width viewWidth*/
+    }
+    .resumen{
+        padding: 1rem;
+    }
+    .imagen__destacada, .card__uno, .card__dos, .card__tres, .card__cuatro{
+        justify-self: center;
+    }
+
+    .boton{
+        width: 35vw;
+        font-size: 1.25rem;
+    }
+
+    .cursos__tarjetas,.cursos__tarjetas--destacado {
+        width: 70vw;
+        height: 25rem;
+    }
+
+    footer{
+        flex-direction: column;
+    }
 }
