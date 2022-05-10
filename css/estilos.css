@@ -95,6 +95,7 @@ h2 {
 
 .imagen__destacada{
     grid-area: imagen__destacada;
+    transform: scale(1.5);
 }
 
 .resumen{
