@@ -17,12 +17,16 @@ body {
     font-size: medium;
 }
 
-header {
+/* header {
     display: flex;
     background-color: #e629c0;
     align-items: center;
     justify-content: flex-end;
     width: 100vw;
+} */
+.bg-pink {
+    background-color: #e629c0;
+    color: white;
 }
 
 .header__logo {
@@ -79,6 +83,10 @@ h2 {
     align-items: center;
 }
 
+.img__conejos {
+    height: 500px;
+    width: 700px;
+}
 .portada{
     grid-area: portada;
     display: flex;
