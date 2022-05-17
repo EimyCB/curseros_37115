@@ -6,10 +6,10 @@ color boton positivo #5E5D0C
 color tarjetas #c8eaff
 Color letra #1B1F21*/
 
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
+} */
 
 body {
     color: #1B1F21;
@@ -17,12 +17,20 @@ body {
     font-size: medium;
 }
 
-header {
+.header {
     display: flex;
-    background-color: #e629c0;
+    background-color: #299DE6;
     align-items: center;
     justify-content: flex-end;
     width: 100vw;
+}
+.bg-pink {
+    background-color: #299DE6;
+    color: white;
+}
+
+.link-nav{
+    color:white;
 }
 
 .header__logo {
@@ -79,6 +87,10 @@ h2 {
     align-items: center;
 }
 
+.img__conejos {
+    height: 500px;
+    width: 700px;
+}
 .portada{
     grid-area: portada;
     display: flex;
@@ -190,7 +202,7 @@ footer{
     height: 50px;
 }
 
-@media (min-width: 541px) and (max-width: 720px){
+@media screen and (min-width: 541px) and (max-width: 720px){
     .grid{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr; 
@@ -205,9 +217,11 @@ footer{
     .portada{
         height: 70vh; /* viewHeight width viewWidth*/
     }
+
+
 }
 
-@media (min-width: 320px) and (max-width: 540px){
+@media screen and (min-width: 320px) and (max-width: 540px) and (orientation:portrait){
     header {
         flex-direction: column;
     }
@@ -236,7 +250,9 @@ footer{
     .imagen__destacada, .card__uno, .card__dos, .card__tres, .card__cuatro{
         justify-self: center;
     }
-
+    .img__gato {
+        display: none;
+    }
     .boton{
         width: 35vw;
         font-size: 1.25rem;
@@ -250,4 +266,112 @@ footer{
     footer{
         flex-direction: column;
     }
+}
+
+@media print {
+    h2 {
+        color: #000;
+    }
+    .img__gato {
+        display: none;
+    }
+}
+
+/* @media (orientation: portrait) {
+    .header__navegacion{
+        flex-direction: column;
+    }
+}
+
+@media (orientation: landscape) {
+    .header__navegacion{
+    flex-direction: row;
+    }
+} */
+
+/* PSEUDO CLASES 
+:hover
+:active
+:visited
+:first-child
+:last-child
+
+*/
+
+a:hover {
+    background-color: #B5B20E;
+    color: black;
+    transform:translate(10px);
+}
+
+a:visited {
+    color:aquamarine;
+}
+
+a:active {
+    color: pink; 
+}
+
+/* NO OBLIGATORIO */
+.div__padre div:first-child {
+    color: red;
+    font-size: xx-large;
+}
+
+/* PSEUDO ELEMENTOS 
+::before
+::after
+::first-letter
+::first-line
+::selection**
+::marker
+*/
+
+ul li {
+    display: inline;
+}
+
+ul li::after {
+    content: " | ";
+    color: red;
+}
+
+ul li:last-child::after {
+    content: "";
+}
+
+ul li::before{
+    content: "";
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+p::first-letter{
+    font-size: 5rem;
+    color: #299DE6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p::first-line {
+    text-decoration: underline;
+    color: #B5B20E;
+    font-weight: 700;
+}
+
+
+p::selection{
+    background-color: #B5B20E;
+    color: green;
+}
+
+ol li {
+    padding-left: 50px;
+}
+ol li::marker {
+    color:green;
+    font-size: 3rem;
+
 }
