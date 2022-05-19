@@ -5,249 +5,202 @@ Color botones negativo #0C6499
 color boton positivo #5E5D0C
 color tarjetas #c8eaff
 Color letra #1B1F21*/
+/* COLORES */
+/* TIPOS DE LETRA */
+.header__titulo {
+  color: white;
+  font-family: Arial;
+  font-size: 32px; }
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    color: #1B1F21;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-}
-
-.bg-pink {
-    background-color: #299DE6;
-    color: white;
-}
-
-.header__logo {
-}
-
-.header__titulo {  
-    color: white;
-    font-family: 'Leckerli One', cursive;
-    font-size: 32px;
-}
-
-.header__navOrden{
-    flex-grow: 1;
-}
+.header__navOrden {
+  flex-grow: 1; }
 
 .header__navegacion {
-    display: flex;
-    flex-wrap: wrap; /* por default es nowrap */
-    justify-content: flex-end;
-    padding: 15px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  /* por default es nowrap */
+  justify-content: flex-end;
+  padding: 15px; }
+
+footer {
+  display: flex; }
+
+.footer__redes {
+  width: 50px;
+  height: 50px; }
+
+@media (min-width: 541px) and (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr;
+    grid-template-areas: "portada portada"
+ "imagen__destacada imagen__destacada"
+ "resumen resumen"
+ "newsletter__titulo newsletter__titulo"
+ "form form" 
+ "card__uno card__dos" 
+ "card__tres card__cuatro"; }
+  .portada {
+    height: 70vh;
+    /* viewHeight width viewWidth*/ } }
+
+@media (min-width: 320px) and (max-width: 540px) {
+  header {
+    flex-direction: column; }
+  .header__navegacion {
+    flex-direction: column; }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "portada"
+ "imagen__destacada "
+ "resumen"
+ "newsletter__titulo"
+ "form" 
+ "card__uno" 
+ "card__dos" 
+ "card__tres" 
+ "card__cuatro"; }
+  .portada {
+    height: 50vh;
+    /* viewHeight width viewWidth*/ }
+  .resumen {
+    padding: 1rem; }
+  .imagen__destacada, .card__uno, .card__dos, .card__tres, .card__cuatro {
+    justify-self: center; }
+  .boton {
+    width: 35vw;
+    font-size: 1.25rem; }
+  .cursos__tarjetas, .cursos__tarjetas--destacado {
+    width: 70vw;
+    height: 25rem; }
+  footer {
+    flex-direction: column; } }
+
+.portada {
+  grid-area: portada;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../recursos/img-principal.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center; }
+
+.imagen__destacada {
+  grid-area: imagen__destacada;
+  transform: scale(1.5); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #299DE6;
+  font-family: "Roboto";
+  font-size: medium; }
+
+.bg-pink {
+  background-color: #299DE6;
+  color: white; }
 
 ul {
-    list-style-type: none;
-}
+  list-style-type: none; }
 
 li {
-    padding: 10px;
-}
-
-li a {
+  padding: 10px; }
+  li a {
     text-decoration: none;
-    color: white;
-}
+    color: white; }
 
-a {
-    text-decoration: none;
-    color:#299DE6;
-}
+a:hover {
+  text-decoration: none;
+  color: #299DE6; }
+
 h2 {
-    color: #299DE6;
-    font-family: 'Leckerli One', cursive;
-}
+  color: #299DE6;
+  font-family: 'Leckerli One', cursive; }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr; 
-    grid-template-areas: "portada portada portada portada"
-                        "imagen__destacada imagen__destacada resumen resumen"
-                        "form form newsletter__titulo newsletter__titulo"
-                        "card__uno card__dos card__tres card__cuatro";
-    justify-content: center;
-    align-items: center;
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr;
+  grid-template-areas: "portada portada portada portada"
+ "imagen__destacada imagen__destacada resumen resumen"
+ "form form newsletter__titulo newsletter__titulo"
+ "card__uno card__dos card__tres card__cuatro";
+  justify-content: center;
+  align-items: center; }
+
 .img__conejos {
-    height: 500px;
-    width: 700px;
-}
-.portada{
-    grid-area: portada;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../recursos/img-principal.jpg");
-    height: 100vh;
-    background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size:  cover;
-    justify-content: center;
-    align-items: center;
-}
+  height: 500px;
+  width: 700px; }
 
-.imagen__destacada{
-    grid-area: imagen__destacada;
-    transform: scale(1.5);
-}
+.portada {
+  grid-area: portada;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../recursos/img-principal.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center; }
 
-.resumen{
-    grid-area:resumen;
-}
+.imagen__destacada {
+  grid-area: imagen__destacada;
+  transform: scale(1.5); }
 
-.form{
-    grid-area: form;
-    justify-self: center;
-}
+.resumen {
+  grid-area: resumen; }
 
-.newsletter__titulo__grid{
-    grid-area: newsletter__titulo;
-}
-
-
-.newsletter__form {
+.form {
+  grid-area: form;
+  justify-self: center; }
+  .form .newsletter__titulo__grid {
+    grid-area: newsletter__titulo; }
+  .form .newsletter__form {
     display: flex;
     flex-direction: column;
     gap: 0.63rem;
-    align-items: center;
-}
+    align-items: center; }
 
 .card__uno {
-    grid-area: card__uno;
-}
+  grid-area: card__uno; }
 
-.card__dos{
-    grid-area: card__dos;
-}
+.card__dos {
+  grid-area: card__dos; }
 
 .card__tres {
-    grid-area: card__tres;
-}
+  grid-area: card__tres; }
 
 .card__cuatro {
-    grid-area: card__cuatro;
-}
-.cursos__tarjetas--destacado {
-    background-color: #B5B20E;
-    padding: 10px;
-    width: 200px;
-    height: 300px;
-    border-radius: 30px;
-}
-.cursos__tarjetas{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */ /* /vertical/ */
-    align-items: center;
-    background-color: #c8eaff;
-    margin:30px;
-    width: 200px;
-    height: 300px;
-    border-radius: 30px;
-}
+  grid-area: card__cuatro; }
 
 .boton {
-    border-radius: 10px;
-    border-color: #299DE6;
-    background-color: #299DE6;
-    color: #c8eaff;
-    padding: 10px;
-    align-self: center;
-}
+  border-radius: 10px;
+  border-color: #299DE6;
+  background-color: #299DE6;
+  color: #c8eaff;
+  padding: 10px;
+  align-self: center; }
 
 .cursos__parrafo {
-    background-color: brown;
-    text-align: center;
-}
+  background-color: brown;
+  text-align: center; }
 
 .cursos__imagen {
-    width: 150px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-
+  width: 150px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px; }
 
 .position {
-    position:fixed;
-    width: 50px;
-    bottom:0px;
-    right: 0px;
-}
-
-footer{ 
-    display: flex;
-}
-
-.footer__redes {
-    width: 50px;
-    height: 50px;
-}
-
-@media (min-width: 541px) and (max-width: 720px){
-    .grid{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr; 
-        grid-template-areas: "portada portada"
-                            "imagen__destacada imagen__destacada"
-                            "resumen resumen"
-                            "newsletter__titulo newsletter__titulo"
-                            "form form" 
-                            "card__uno card__dos" 
-                            "card__tres card__cuatro";
-    }
-    .portada{
-        height: 70vh; /* viewHeight width viewWidth*/
-    }
-}
-
-@media (min-width: 320px) and (max-width: 540px){
-    header {
-        flex-direction: column;
-    }
-    .header__navegacion{
-        flex-direction: column;
-    }
-    .grid {
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto; 
-        grid-template-areas: "portada"
-        "imagen__destacada "
-        "resumen"
-        "newsletter__titulo"
-        "form" 
-        "card__uno" 
-        "card__dos" 
-        "card__tres" 
-        "card__cuatro";
-    }
-    .portada{
-        height: 50vh; /* viewHeight width viewWidth*/
-    }
-    .resumen{
-        padding: 1rem;
-    }
-    .imagen__destacada, .card__uno, .card__dos, .card__tres, .card__cuatro{
-        justify-self: center;
-    }
-
-    .boton{
-        width: 35vw;
-        font-size: 1.25rem;
-    }
-
-    .cursos__tarjetas,.cursos__tarjetas--destacado {
-        width: 70vw;
-        height: 25rem;
-    }
-
-    footer{
-        flex-direction: column;
-    }
-}
+  position: fixed;
+  width: 50px;
+  bottom: 0px;
+  right: 0px; }

@@ -1,0 +1,16 @@
+.header {
+    &__titulo {
+        color: $color-letra-navegacion;
+        font-family: $font-principal;
+        font-size: 32px;
+    }
+    &__navOrden {
+        flex-grow: 1;
+    }
+    &__navegacion {
+        display: flex;
+        flex-wrap: wrap; /* por default es nowrap */
+        justify-content: flex-end;
+        padding: 15px;
+    }
+}

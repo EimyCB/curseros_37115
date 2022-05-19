@@ -1,0 +1,61 @@
+@media (min-width: 541px) and (max-width: 720px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr; 
+        grid-template-areas: "portada portada"
+                            "imagen__destacada imagen__destacada"
+                            "resumen resumen"
+                            "newsletter__titulo newsletter__titulo"
+                            "form form" 
+                            "card__uno card__dos" 
+                            "card__tres card__cuatro";
+    }
+    .portada{
+        height: 70vh; /* viewHeight width viewWidth*/
+    }
+}
+
+@media (min-width: 320px) and (max-width: 540px){
+    header {
+        flex-direction: column;
+    }
+    .header__navegacion{
+        flex-direction: column;
+    }
+    .grid {
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto; 
+        grid-template-areas: "portada"
+        "imagen__destacada "
+        "resumen"
+        "newsletter__titulo"
+        "form" 
+        "card__uno" 
+        "card__dos" 
+        "card__tres" 
+        "card__cuatro";
+    }
+    .portada{
+        height: 50vh; /* viewHeight width viewWidth*/
+    }
+    .resumen{
+        padding: 1rem;
+    }
+    .imagen__destacada, .card__uno, .card__dos, .card__tres, .card__cuatro{
+        justify-self: center;
+    }
+
+    .boton{
+        width: 35vw;
+        font-size: 1.25rem;
+    }
+
+    .cursos__tarjetas,.cursos__tarjetas--destacado {
+        width: 70vw;
+        height: 25rem;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}

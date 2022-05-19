@@ -1,0 +1,18 @@
+.portada{
+    grid-area: portada;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../recursos/img-principal.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen__destacada{
+    grid-area: imagen__destacada;
+    transform: scale(1.5);
+}

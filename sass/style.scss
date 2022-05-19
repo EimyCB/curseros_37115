@@ -1,0 +1,146 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'mediaqueries';
+@import 'card';
+@import 'portada';
+
+*{
+    margin: 0;
+    padding: 0
+}
+
+body {
+    color: $color-principal;
+    font-family: $font-body;
+    font-size: medium;
+}
+
+.bg-pink {
+    background-color: $color-principal;
+    color: $color-letra-navegacion;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+    a {
+        text-decoration: none;
+        color: $color-letra-navegacion;  
+    }
+}
+
+
+a:hover {
+    text-decoration: none;
+    color:$color-principal;
+}
+h2 {
+    color: $color-principal;
+    font-family: 'Leckerli One', cursive;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr; 
+    grid-template-areas: "portada portada portada portada"
+                        "imagen__destacada imagen__destacada resumen resumen"
+                        "form form newsletter__titulo newsletter__titulo"
+                        "card__uno card__dos card__tres card__cuatro";
+    justify-content: center;
+    align-items: center;
+}
+.img__conejos {
+    height: 500px;
+    width: 700px;
+}
+.portada{
+    grid-area: portada;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../recursos/img-principal.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen__destacada{
+    grid-area: imagen__destacada;
+    transform: scale(1.5);
+}
+
+.resumen{
+    grid-area:resumen;
+}
+
+.form{
+    grid-area: form;
+    justify-self: center;
+    .newsletter {
+        &__titulo__grid{
+        grid-area: newsletter__titulo;
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.63rem;
+            align-items: center;
+        }
+    }
+}
+
+
+.card__uno {
+    grid-area: card__uno;
+}
+
+.card__dos{
+    grid-area: card__dos;
+}
+
+.card__tres {
+    grid-area: card__tres;
+}
+
+.card__cuatro {
+    grid-area: card__cuatro;
+}
+
+.boton {
+    border-radius: 10px;
+    border-color: #299DE6;
+    background-color: #299DE6;
+    color: #c8eaff;
+    padding: 10px;
+    align-self: center;
+}
+
+.cursos__parrafo {
+    background-color: brown;
+    text-align: center;
+}
+
+.cursos__imagen {
+    width: 150px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+.position {
+    position:fixed;
+    width: 50px;
+    bottom:0px;
+    right: 0px;
+}
+
+
