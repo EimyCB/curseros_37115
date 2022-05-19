@@ -1,0 +1,47 @@
+.cursos {
+    &__tarjetas--destacado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-secundary;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    border-radius: 2rem;
+    }
+    &__tarjetas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-cards;
+        margin:1rem;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+        border-radius: 2rem;
+    }
+    &__imagen {
+        width: auto;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    &__parrafo {
+        font-size: .75rem;
+        text-align: center;
+    }
+}
+
+.card{
+    &__uno {
+    grid-area: card__uno;
+    }
+    &__dos{
+        grid-area: card__dos;
+    }
+    &__tres {
+        grid-area: card__tres;
+    }
+    &__cuatro {
+        grid-area: card__cuatro;
+    }
+}

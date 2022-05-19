@@ -10,9 +10,24 @@
 	background-size:  cover;
     justify-content: center;
     align-items: center;
+    &__titulo {
+        color: $color-primary;
+        font-family: $font-principal;
+        font-size: 3rem;
+    }
+    &__botones{
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .imagen__destacada{
     grid-area: imagen__destacada;
-    transform: scale(1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resumen{
+    grid-area:resumen;
 }

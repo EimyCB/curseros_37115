@@ -1,26 +1,28 @@
-/* Color principal #299DE6
-Color secundario #B5B20E
-Color para resaltar #E64041
-Color botones negativo #0C6499
-color boton positivo #5E5D0C
-color tarjetas #c8eaff
-Color letra #1B1F21*/
 /* COLORES */
 /* TIPOS DE LETRA */
-.header__titulo {
-  color: white;
-  font-family: Arial;
-  font-size: 32px; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 0.75fr 0.75fr 1.5fr;
+  grid-template-areas: "portada portada portada portada" "imagen__destacada imagen__destacada resumen resumen" "form form newsletter__titulo newsletter__titulo" "card__uno card__dos card__tres card__cuatro";
+  justify-content: center;
+  align-items: center; }
 
-.header__navOrden {
-  flex-grow: 1; }
-
-.header__navegacion {
-  display: flex;
-  flex-wrap: wrap;
-  /* por default es nowrap */
-  justify-content: flex-end;
-  padding: 15px; }
+.header {
+  background-color: #299DE6;
+  color: white; }
+  .header__titulo {
+    color: white;
+    font-family: "Leckerli One", cursive;
+    font-size: 32px; }
+  .header__navOrden {
+    flex-grow: 1; }
+  .header__navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    /* por default es nowrap */
+    justify-content: flex-end;
+    padding: 15px; }
 
 footer {
   display: flex; }
@@ -29,17 +31,99 @@ footer {
   width: 50px;
   height: 50px; }
 
+.cursos__tarjetas--destacado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B5B20E;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  border-radius: 2rem; }
+
+.cursos__tarjetas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c8eaff;
+  margin: 1rem;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  border-radius: 2rem; }
+
+.cursos__imagen {
+  width: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px; }
+
+.cursos__parrafo {
+  font-size: .75rem;
+  text-align: center; }
+
+.card__uno {
+  grid-area: card__uno; }
+
+.card__dos {
+  grid-area: card__dos; }
+
+.card__tres {
+  grid-area: card__tres; }
+
+.card__cuatro {
+  grid-area: card__cuatro; }
+
+.portada {
+  grid-area: portada;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../recursos/img-principal.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center; }
+  .portada__titulo {
+    color: #299DE6;
+    font-family: "Leckerli One", cursive;
+    font-size: 3rem; }
+  .portada__botones {
+    display: flex;
+    gap: 1rem; }
+
+.imagen__destacada {
+  grid-area: imagen__destacada;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.resumen {
+  grid-area: resumen; }
+
+button {
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  align-self: center;
+  color: #1B1F21; }
+
+.boton {
+  border-color: #B5B20E;
+  background-color: #B5B20E; }
+  .boton:hover {
+    background-color: #5E5D0C; }
+  .boton__secundario {
+    border-color: #0C6499;
+    background-color: #0C6499; }
+
 @media (min-width: 541px) and (max-width: 720px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1.5fr 0.75fr 0.75fr 0.75fr;
-    grid-template-areas: "portada portada"
- "imagen__destacada imagen__destacada"
- "resumen resumen"
- "newsletter__titulo newsletter__titulo"
- "form form" 
- "card__uno card__dos" 
- "card__tres card__cuatro"; }
+    grid-template-areas: "portada portada" "imagen__destacada imagen__destacada" "resumen resumen" "newsletter__titulo newsletter__titulo" "form form"  "card__uno card__dos"  "card__tres card__cuatro"; }
   .portada {
     height: 70vh;
     /* viewHeight width viewWidth*/ } }
@@ -52,15 +136,7 @@ footer {
   .grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "portada"
- "imagen__destacada "
- "resumen"
- "newsletter__titulo"
- "form" 
- "card__uno" 
- "card__dos" 
- "card__tres" 
- "card__cuatro"; }
+    grid-template-areas: "portada" "imagen__destacada " "resumen" "newsletter__titulo" "form"  "card__uno"  "card__dos"  "card__tres"  "card__cuatro"; }
   .portada {
     height: 50vh;
     /* viewHeight width viewWidth*/ }
@@ -77,35 +153,14 @@ footer {
   footer {
     flex-direction: column; } }
 
-.portada {
-  grid-area: portada;
-  display: flex;
-  flex-direction: column;
-  background-image: url("../recursos/img-principal.jpg");
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center; }
-
-.imagen__destacada {
-  grid-area: imagen__destacada;
-  transform: scale(1.5); }
-
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  color: #299DE6;
-  font-family: "Roboto";
+  color: #1B1F21;
+  font-family: "Roboto", sans-serif;
   font-size: medium; }
-
-.bg-pink {
-  background-color: #299DE6;
-  color: white; }
 
 ul {
   list-style-type: none; }
@@ -122,42 +177,11 @@ a:hover {
 
 h2 {
   color: #299DE6;
-  font-family: 'Leckerli One', cursive; }
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr;
-  grid-template-areas: "portada portada portada portada"
- "imagen__destacada imagen__destacada resumen resumen"
- "form form newsletter__titulo newsletter__titulo"
- "card__uno card__dos card__tres card__cuatro";
-  justify-content: center;
-  align-items: center; }
+  font-family: "Leckerli One", cursive; }
 
 .img__conejos {
   height: 500px;
   width: 700px; }
-
-.portada {
-  grid-area: portada;
-  display: flex;
-  flex-direction: column;
-  background-image: url("../recursos/img-principal.jpg");
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center; }
-
-.imagen__destacada {
-  grid-area: imagen__destacada;
-  transform: scale(1.5); }
-
-.resumen {
-  grid-area: resumen; }
 
 .form {
   grid-area: form;
@@ -169,35 +193,6 @@ h2 {
     flex-direction: column;
     gap: 0.63rem;
     align-items: center; }
-
-.card__uno {
-  grid-area: card__uno; }
-
-.card__dos {
-  grid-area: card__dos; }
-
-.card__tres {
-  grid-area: card__tres; }
-
-.card__cuatro {
-  grid-area: card__cuatro; }
-
-.boton {
-  border-radius: 10px;
-  border-color: #299DE6;
-  background-color: #299DE6;
-  color: #c8eaff;
-  padding: 10px;
-  align-self: center; }
-
-.cursos__parrafo {
-  background-color: brown;
-  text-align: center; }
-
-.cursos__imagen {
-  width: 150px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px; }
 
 .position {
   position: fixed;

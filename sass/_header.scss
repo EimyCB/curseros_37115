@@ -1,6 +1,8 @@
 .header {
+    background-color: $color-primary;
+    color: $color-nav-link;
     &__titulo {
-        color: $color-letra-navegacion;
+        color: $color-nav-link;
         font-family: $font-principal;
         font-size: 32px;
     }

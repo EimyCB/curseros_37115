@@ -1,0 +1,19 @@
+button {
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    align-self: center;
+    color: $color-body;
+}
+
+.boton {
+    border-color: $color-secundary;
+    background-color: $color-secundary;
+    &:hover{
+        background-color: $color-button-postive;
+    }
+    &__secundario{
+        border-color: $color-button-negative;
+        background-color: $color-button-negative;
+    }
+}

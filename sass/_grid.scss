@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.75fr 0.75fr 1.5fr; 
+    grid-template-areas: "portada portada portada portada"
+                        "imagen__destacada imagen__destacada resumen resumen"
+                        "form form newsletter__titulo newsletter__titulo"
+                        "card__uno card__dos card__tres card__cuatro";
+    justify-content: center;
+    align-items: center;
+}
